@@ -109,7 +109,7 @@ brew cask install slack
 brew cask install dropbox
 brew cask install firefox
 brew cask install gimp
-mas install 803453959
+mas install 803453959        # Slack
 ```
 
 ## GitHub
@@ -145,6 +145,11 @@ mas install 803453959
 
 
 ## SSH
+
+SSH Keys
+- followed the steps here: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+- add SSH key to GitHub: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+- add SSH key to bitbucket
 
 ### Config - `~./ssh/config`
 
@@ -182,6 +187,18 @@ parse_git_branch() {
 
 # Format to user@host:/path/to/directory (branch-name)
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
+```
+
+
+
+set up file structure in `/Users/annerichardson/`
+```
+mkdir software_development
+cd software_development
+mkdir contract_work
+mkdir learning_academies
+mkdir open_source
+mkdir personal_projects
 ```
 
 ## Configure dotfiles
