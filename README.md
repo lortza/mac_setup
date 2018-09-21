@@ -4,7 +4,7 @@
 
 This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for web development.
 
-## System Preferences (Round 1)
+## Set System Preferences (Round 1)
 
 - **Track Pad:** Speed, Click, Secondary Click
 - **Dock:** Size
@@ -12,47 +12,64 @@ This is a simple list of instructions to make setting up your Apple computer as 
 - **Security and Privacy > Firewall >** On
 - **Displays > Display >** Uncheck "Show mirroring options in menu bar"
 - **Displays > Night Shift >** Set schedule and temperature
-- **App Store >** Install app updates
+- **App Store >** Check: "Install app updates"
 - **Sharing >** Off
 - **Date & Time >** Show date
 
 
-## App Store
+## In the App Store
 
-### Updates
+### Run Updates
 
 - Do all OS updates
 - Do all system default software updates
 - Restart computer again after all updates
+- Check Console for errors
 
-### Purchased
+### Install Purchased
 
 - Install CopyClip
 - Install Evernote, sign in
+- Restart computer again after all updates
+- Check Console for errors
 
-## Dock
+## Clean up Dock
 
 - Remove all unused icons from dock
 
 ## Homebrew
 
+Install Homebrew
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### Mac App Store
+Tap Cask
+```
+brew tap caskroom/cask
+```
+
+Install Google Chrome
+```
+brew cask install google-chrome
+```
+Open, Sign In, and load these instructions.
+
+### Install Mac App Store Interface
 
 ```shell
 brew install mas
 ```
 
-#### Sign in
+#### Sign in to App Store
+
+May get `Error: Already signed in`
 
 ```shell
-mas signin email@email.com
+mas signin [my_apple_id]
 ```
 
-### Brewfile
+### Set up Brewfile
 
 ```shell
 touch Brewfile
@@ -216,6 +233,8 @@ sudo mv composer.phar /usr/local/bin/composer
 ## Mac Preferences (Round 2)
 
 - **Printers & Scanners >** TBD
+- **Users & Groups >** TBD
+- Statup applications
 
 
 ### Show Library folder
