@@ -1,48 +1,38 @@
-# macOS High Sierra v. 10.13 Setup 
+# macOS High Sierra v. 10.13 Setup
 
-[View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) 
+[View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
 
 This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for web development.
 
-## Preferences
+## System Preferences (Round 1)
 
-- **Keyboard > Text >** Disable "Correct spelling automatically".
-- **Security and Privacy > Firewall >** On
+- **Track Pad:** Speed, Click, Secondary Click
+- **Dock:** Size
 - **Security and Privacy > General >** App Store and identified developers
-- **File Sharing >** Off
-- **Users & Groups > Login Items >** Spectacle, Flux
+- **Security and Privacy > Firewall >** On
+- **Displays > Display >** Uncheck "Show mirroring options in menu bar"
+- **Displays > Night Shift >** Set schedule and temperature
+- **App Store >** Install app updates
+- **Sharing >** Off
+- **Date & Time >** Show date
 
-### Show Library folder
 
-```shell
-chflags nohidden ~/Library
-```
+## App Store
 
-### Show hidden files
+### Updates
 
-This can also be done by pressing `command` + `shift` + `.`.
+- Do all OS updates
+- Do all system default software updates
+- Restart computer again after all updates
 
-```shell
-defaults write com.apple.finder AppleShowAllFiles YES
-```
+### Purchased
 
-### Show path bar
+- Install CopyClip
+- Install Evernote, sign in
 
-```shell
-defaults write com.apple.finder ShowPathbar -bool true
-```
+## Dock
 
-### Show status bar
-
-```shell
-defaults write com.apple.finder ShowStatusBar -bool true
-```
-
-### Disable unidentified developer warnings
-
-```shell
-sudo spctl --master-disable
-```
+- Remove all unused icons from dock
 
 ## Homebrew
 
@@ -86,8 +76,8 @@ cask 'vlc'
 cask 'macdown'
 
 mas 'Slack', id: 803453959
-mas 'Sip', id: 507257563 
-mas 'Simplenote', id: 692867256 
+mas 'Sip', id: 507257563
+mas 'Simplenote', id: 692867256
 mas 'Todoist', id: 585829637
 ```
 
@@ -221,3 +211,46 @@ gem install bundler
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 ```
+
+
+## Mac Preferences (Round 2)
+
+- **Printers & Scanners >** TBD
+
+
+### Show Library folder
+
+```shell
+chflags nohidden ~/Library
+```
+
+### Show hidden files
+
+This can also be done by pressing `command` + `shift` + `.`.
+
+```shell
+defaults write com.apple.finder AppleShowAllFiles YES
+```
+
+### Show path bar
+
+```shell
+defaults write com.apple.finder ShowPathbar -bool true
+```
+
+### Show status bar
+
+```shell
+defaults write com.apple.finder ShowStatusBar -bool true
+```
+
+### Disable unidentified developer warnings
+
+```shell
+sudo spctl --master-disable
+```
+
+
+
+
+
