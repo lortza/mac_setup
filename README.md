@@ -13,6 +13,7 @@ This is a simple list of instructions to make setting up your Apple computer as 
 - **Displays > Display >** Uncheck "Show mirroring options in menu bar"
 - **Displays > Night Shift >** Set schedule and temperature
 - **App Store >** Check: "Install app updates"
+- **App Store Password Settings >** Free Downloads: Save Password
 - **Sharing >** Off
 - **Date & Time >** Show date
 
@@ -63,39 +64,52 @@ brew install mas
 
 #### Sign in to App Store
 
-May get `Error: Already signed in`
-
 ```shell
 mas signin [my_apple_id]
 ```
+May get `Error: Already signed in`
 
-### Set up Brewfile
+### Install Apps
+
+#### Option 1: Set up Brewfile
 
 ```shell
 touch Brewfile
 ```
 
 ```shell
-tap 'caskroom/cask'
-
 brew 'git'
-brew 'npm'
 
-cask 'visual-studio-code'
-cask 'firefox'
-cask 'gimp'
-cask 'google-chrome'
-cask 'opera'
 cask 'spectacle'
-cask 'sequel-pro'
-cask 'utorrent'
-cask 'vlc'
-cask 'macdown'
+cask 'sublime-text'
+cask 'atom'
+cask 'harvest'
+cask 'slack'
+cask 'dropbox'
+cask 'firefox'
+cask 'spectacle'
+cask 'gimp'
 
 mas 'Slack', id: 803453959
-mas 'Sip', id: 507257563
-mas 'Simplenote', id: 692867256
-mas 'Todoist', id: 585829637
+```
+
+```shell
+brew bundle
+```
+
+#### Option 2: Install Manually
+
+```shell
+brew install git
+brew cask install spectacle
+brew cask install sublime-text
+brew cask install atom
+brew cask install harvest
+brew cask install slack
+brew cask install dropbox
+brew cask install firefox
+brew cask install gimp
+mas install 803453959
 ```
 
 ## GitHub
@@ -170,6 +184,18 @@ parse_git_branch() {
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
 ```
 
+## Configure dotfiles
+from https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
+
+
+## Configure Atom
+
+### Install Packages
+from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
+### Load Snippets
+from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
+
+<!--
 ## Node.js
 
 ### Download Node
@@ -268,7 +294,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 ```shell
 sudo spctl --master-disable
 ```
-
+ -->
 
 
 
