@@ -111,11 +111,42 @@ brew cask install slack
 brew cask install dropbox
 brew cask install firefox
 brew cask install gimp
+brew cask install spotify
 mas install 803453959        # Slack
 ```
 
 - Check App Store for Updates & run them
 - Restart Mac & check Console for errors
+
+
+## Install Node.js
+
+```
+brew install node
+```
+
+- Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=12e4acd2-a9a1-41a7-aabc-5ceab533de79&s=s266&ses=4&sh=2&sds=5&)
+- Check that Node works
+  ```
+  node
+  ```
+- Exit node
+
+
+## Install NVM
+
+```
+brew update
+brew install nvm
+source $(brew --prefix nvm)/nvm.sh
+```
+- Run nvm
+  ```
+  nvm
+  ```
+- You should see a list of options. If you don't, see [this StackOverflow post](http://stackoverflow.com/questions/27651892/homebrew-installs-nvm-but-nvm-cant-be-found-afterwards)
+- Exit nvm
+- Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=aa55a413-32c8-40a7-8956-ee1da7d7fbca&s=s266&ses=1&sh=5&sds=5&x=nvm%2520installation&)
 
 
 ## Configure Git
@@ -164,48 +195,47 @@ In the `.gitconfig` file:
   conflictstyle = diff3
 ```
 
-## SSH
+## SSH Keys
+Create SSH keys and connect them to GitHub and Bitbucket accounts.
 
-SSH Keys
 - [Follow GitHub Guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) OR...
-- Generate Keys `ssh-keygen -t rsa -b 4096 -C "my_github_email@example.com"`
+- Generate Keys
+  ```
+  ssh-keygen -t rsa -b 4096 -C "my_github_email@example.com"
+  ```
 - Press `Enter` to accept the default location
 - Enter a passphrase
 - Create new Secure Note in Lastpass & Save
   - Store passphrase
   - Store fingerprint
-  - Store private key (`id_rsa`)
-  - Store public key (`id_rsa.pub`)
-- Add the SSH key to the local agent `eval "$(ssh-agent -s)"`
+  - Store private key (filename: `id_rsa`)
+  - Store public key (filename: `id_rsa.pub`)
+- Add the SSH key to the local agent
+  ```
+  eval "$(ssh-agent -s)"
+  ```
 - For macOS Sierra 10.12.12 and later:
-  - Create a ssh/config file: `cd ~/.ssh ; touch config`
-  - Add this info to it and save:
+  - Create a ssh/config file:
+    ```
+    cd ~/.ssh ; touch config ; subl .
+    ```
+  - Add this info to `.ssh/config` and save:
+    ```
+    Host *
+     AddKeysToAgent yes
+     UseKeychain yes
+     IdentityFile ~/.ssh/id_rsa
+    ```
+- Add the key to the agent
   ```
-  Host *
-   AddKeysToAgent yes
-   UseKeychain yes
-   IdentityFile ~/.ssh/id_rsa
+  ssh-add -K ~/.ssh/id_rsa
   ```
-- Add the key to the agent `ssh-add -K ~/.ssh/id_rsa`
 - [Add SSH key to GitHub](https://github.com/settings/keys) (Helpful [guide](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/))
 - [Add SSH key to Bitbucket](https://bitbucket.org/account/user/annerichardson/ssh-keys/)
 
-### Config - `~./ssh/config`
 
-```shell
-Host example
-    HostName example.com
-    User example-user
-    IdentityFile key.pem
-```
 
-### Generate SSH key
 
-```shell
-ssh-keygen -t rsa -b 4096 -C "you@example.com"
-eval "$(ssh-agent -s)"
-ssh-add -K ~/.ssh/id_rsa
-```
 
 ## Bash
 
@@ -260,7 +290,7 @@ alias glo='git log --oneline'
 
 
 
-set up file structure in `/Users/annerichardson/`
+Set up file structure in `/Users/annerichardson/`
 ```
 mkdir software_development
 cd software_development
