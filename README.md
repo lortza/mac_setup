@@ -135,8 +135,8 @@ brew install node
 
 
 ## Install NVM
-Node Version Manager
 
+- Install [Node Version Manager](https://github.com/creationix/nvm/blob/master/README.md)
 ```
 brew install nvm
 source $(brew --prefix nvm)/nvm.sh
@@ -151,11 +151,20 @@ source $(brew --prefix nvm)/nvm.sh
 
 
 ## Install RVM
-[Ruby Version Manager](https://rvm.io/rvm/install)
 
-```
-\curl -sSL https://get.rvm.io | bash -s stable
-```
+- Install [Ruby Version Manager](https://rvm.io/rvm/install)
+  ```
+  \curl -sSL https://get.rvm.io | bash -s stable
+  ```
+- Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=87807eea-365f-494e-a8d0-74ca5a097209&s=s266&ses=1&sh=5&sds=5&x=rvm%2520installation&)
+- Add the path:
+  ```
+  source /Users/annerichardson/.rvm/scripts/rvm
+  ```
+- Run nvm to make sure it worked
+  ```
+  nvm
+  ```
 - Add [autolibs](https://rvm.io/rvm/autolibs) to automatically install dependencies
   ```
   rvm autolibs homebrew
