@@ -1,8 +1,8 @@
 # macOS High Sierra v. 10.13 Setup
 
-[View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
-
 This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for web development.
+
+I followed [this gist by mikevallano](https://gist.github.com/mikevallano/d0964aeff471453060cf5c096859adac) and forked [this repo by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) as guides to made this version.
 
 ## Set System Preferences (Round 1)
 
@@ -71,7 +71,8 @@ May get `Error: Already signed in`
 
 ### Install Apps
 
-#### Option 1: Set up Brewfile
+#### Option 1: Set up Brewfile -- I have not done this
+Brew bundle's uild is currently failing, so I chose to do the manual install on 9/21/18.
 
 ```shell
 touch Brewfile
@@ -96,8 +97,9 @@ mas 'Slack', id: 803453959
 ```shell
 brew bundle
 ```
+Restart Mac & check Console for errors
 
-#### Option 2: Install Manually
+#### Option 2: Install Manually -- I did this
 
 ```shell
 brew install git
@@ -112,19 +114,27 @@ brew cask install gimp
 mas install 803453959        # Slack
 ```
 
-## GitHub
+- Check App Store for Updates & run them
+- Restart Mac & check Console for errors
 
-### Config - `~/.gitconfig`
 
+## Configure Git
 
+Set up the github config file
+```shell
+subl ~/.gitconfig
+```
+
+In the `.gitconfig` file:
 ```shell
 [user]
   name   = Firstname Lastname
   email  = you@example.com
 [github]
-  user   = hunter2
+  user   = my_github_username
 [alias]
   a      = add
+  c      = commit
   ca     = commit -a
   cam    = commit -am
   cm     = commit -m
@@ -141,15 +151,24 @@ mas install 803453959        # Slack
   lt     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
 [credential]
   helper = osxkeychain
+[core]
+  editor = subl -n -w
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+[merge]
+  conflictstyle = diff3
 ```
-
 
 ## SSH
 
 SSH Keys
 - followed the steps here: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 - add SSH key to GitHub: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
-- add SSH key to bitbucket
+- [GitHub SSH Keys Settings](https://github.com/settings/keys)
+- [Bitbucket SSH Keys Settings](https://bitbucket.org/account/user/annerichardson/ssh-keys/)
 
 ### Config - `~./ssh/config`
 
@@ -176,6 +195,25 @@ ssh-add -K ~/.ssh/id_rsa
 # Update and clean homebrow in one command
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
+# prompt colors!
+RED='\[\e[1;31m\]'
+YELLOW='\[\e[0;33m\]'
+BOLDYELLOW='\[\e[1;33m\]'
+GREEN='\[\e[0;32m\]'
+BLUE='\[\e[1;34m\]'
+DARKBROWN='\[\e[1;33m\]'
+DARKGRAY='\[\e[1;30m\]'
+CUSTOMCOLORMIX='\[\e[1;30m\]'
+DARKCUSTOMCOLORMIX='\[\e[1;32m\]'
+LIGHTBLUE="\[\033[0;36m\]"
+BOLDLIGHTBLUE="\[\033[1;36m\]"
+BOLDPURPLE='\[\e[1;35m\]'
+
+green="\[\033[0;32m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+reset="\[\033[0m\]"
+
 # Add colors to Terminal
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -187,6 +225,17 @@ parse_git_branch() {
 
 # Format to user@host:/path/to/directory (branch-name)
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
+
+# Git Aliases
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gco='git checkout'
+alias gb='git branch'
+alias gl='git log'
+alias glp="git log --pretty=format:'%h - %an, %ar: %s'"
+alias glo='git log --oneline'
 ```
 
 
@@ -312,6 +361,11 @@ defaults write com.apple.finder ShowStatusBar -bool true
 sudo spctl --master-disable
 ```
  -->
+
+
+## Put Computer details in Google Doc
+
+- Create a file in [this folder](https://drive.google.com/drive/folders/0B2alZr-hRu53Ulh2dkhhOEEyNVU) with the stats for the computer. This will be useful later when I need to access that information remotely.
 
 
 
