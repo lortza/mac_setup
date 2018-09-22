@@ -120,8 +120,10 @@ mas install 803453959        # Slack
 
 ## Configure Git
 
+This sets up the defaults for how you interact with Git.
+
 Set up the github config file
-```shell
+```
 subl ~/.gitconfig
 ```
 
@@ -165,10 +167,28 @@ In the `.gitconfig` file:
 ## SSH
 
 SSH Keys
-- followed the steps here: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-- add SSH key to GitHub: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
-- [GitHub SSH Keys Settings](https://github.com/settings/keys)
-- [Bitbucket SSH Keys Settings](https://bitbucket.org/account/user/annerichardson/ssh-keys/)
+- [Follow GitHub Guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) OR...
+- Generate Keys `ssh-keygen -t rsa -b 4096 -C "my_github_email@example.com"`
+- Press `Enter` to accept the default location
+- Enter a passphrase
+- Create new Secure Note in Lastpass & Save
+  - Store passphrase
+  - Store fingerprint
+  - Store private key (`id_rsa`)
+  - Store public key (`id_rsa.pub`)
+- Add the SSH key to the local agent `eval "$(ssh-agent -s)"`
+- For macOS Sierra 10.12.12 and later:
+  - Create a ssh/config file: `cd ~/.ssh ; touch config`
+  - Add this info to it and save:
+  ```
+  Host *
+   AddKeysToAgent yes
+   UseKeychain yes
+   IdentityFile ~/.ssh/id_rsa
+  ```
+- Add the key to the agent `ssh-add -K ~/.ssh/id_rsa`
+- [Add SSH key to GitHub](https://github.com/settings/keys) (Helpful [guide](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/))
+- [Add SSH key to Bitbucket](https://bitbucket.org/account/user/annerichardson/ssh-keys/)
 
 ### Config - `~./ssh/config`
 
