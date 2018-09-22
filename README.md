@@ -90,6 +90,7 @@ cask 'dropbox'
 cask 'firefox'
 cask 'spectacle'
 cask 'gimp'
+cask 'spotify'
 
 mas 'Slack', id: 803453959
 ```
@@ -134,19 +135,38 @@ brew install node
 
 
 ## Install NVM
+Node Version Manager
 
 ```
-brew update
 brew install nvm
 source $(brew --prefix nvm)/nvm.sh
 ```
+- Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=aa55a413-32c8-40a7-8956-ee1da7d7fbca&s=s266&ses=1&sh=5&sds=5&x=nvm%2520installation&)
 - Run nvm
   ```
   nvm
   ```
 - You should see a list of options. If you don't, see [this StackOverflow post](http://stackoverflow.com/questions/27651892/homebrew-installs-nvm-but-nvm-cant-be-found-afterwards)
-- Exit nvm
-- Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=aa55a413-32c8-40a7-8956-ee1da7d7fbca&s=s266&ses=1&sh=5&sds=5&x=nvm%2520installation&)
+- Restart computer & check console for errors
+
+
+## Install RVM
+[Ruby Version Manager](https://rvm.io/rvm/install)
+
+```
+\curl -sSL https://get.rvm.io | bash -s stable
+```
+- Add [autolibs](https://rvm.io/rvm/autolibs) to automatically install dependencies
+  ```
+  rvm autolibs homebrew
+  ```
+
+## Install Postgresql
+
+```
+brew install postgresql
+```
+- Copy terminal output into [Evernote file](tbd)
 
 
 ## Configure Git
