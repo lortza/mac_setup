@@ -162,13 +162,25 @@ source $(brew --prefix nvm)/nvm.sh
   ```
   source /Users/annerichardson/.rvm/scripts/rvm
   ```
-- Run nvm to make sure it worked
+- Run rvm to make sure it worked
   ```
-  nvm
+  rvm
   ```
 - Add [autolibs](https://rvm.io/rvm/autolibs) to automatically install dependencies
   ```
   rvm autolibs homebrew
+  ```
+- Install ruby
+  ```shell
+  rvm install ruby-head
+  ```
+- Set default ruby version
+  ```shell
+  rvm --default use 2.5.1
+  ```
+- Install bundler
+  ```shell
+  gem install bundler
   ```
 
 ## Install PostgreSQL
@@ -363,28 +375,12 @@ from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_p
 ### Load Snippets
 from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
 
+
+## Configure CopyClip
+
+
 <!--
-## Node.js
 
-### Download Node
-
-```shell
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
-```
-
-```shell
-nvm install node
-```
-
-```shell
-nvm use node
-```
-
-#### Update Node.js
-
-```shell
-nvm install node --reinstall-packages-from=node
-```
 
 ## npm
 
@@ -394,13 +390,7 @@ nvm install node --reinstall-packages-from=node
 npm install --global gulp-cli
 ```
 
-## Ruby Version Manager
 
-### Download rvm
-
-```shell
-\curl -sSL https://get.rvm.io | bash -s stable
-```
 
 ### Install Ruby version
 
