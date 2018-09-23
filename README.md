@@ -4,6 +4,8 @@ This is a simple list of instructions to make setting up my MacBook Pro as fast 
 
 I followed [this gist by mikevallano](https://gist.github.com/mikevallano/d0964aeff471453060cf5c096859adac) and forked [this repo by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) as guides to made this version.
 
+NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles)
+
 ## Set System Preferences (Round 1)
 
 - **Track Pad:** Speed, Click, Secondary Click
@@ -207,6 +209,9 @@ brew install postgresql
   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
   ```
 
+## Install MySQL
+TBD
+
 ## Configure Git
 
 This sets up the defaults for how you interact with Git.
@@ -256,11 +261,13 @@ In the `.gitconfig` file:
 - Create `git-completion` file
   ```
   touch ~/git-completion.bash
+  subl ~/git-completion.bash
   ```
 - Add copy all contents from the [master file](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) into it and save
 - Create `git-prompt` file
   ```
   touch ~/git-prompt.sh
+  subl ~/git-prompt.sh
   ```
 - Add copy all contents from the [master file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh) into it and save
 
@@ -383,8 +390,8 @@ mkdir personal_projects
 ```
 
 ## Configure dotfiles
-from https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
-
+My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
+My 2017 Mac dotfiles repo https://github.com/lortza/dotfiles
 
 ## Configure Atom
 
@@ -398,8 +405,10 @@ from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_s
 
 ## Install Ruby and Rails versions for Crucial projects
 
-- tmdb: ruby 2.2.2, rails 4.2.3
-- tarot: ruby 2.4.2, rails 5.1.4
+- tmdb:   ruby 2.2.2, rails 4.2.3
+- tarot:  ruby 2.4.2, rails 5.1.4
+- ftpg:   ruby 2.3.7, rails 4.1.2
+- pp:     ruby 2.5.1, rails 5.2.0
 
 
 <!--
@@ -414,20 +423,6 @@ npm install --global gulp-cli
 ```
 
 
-
-### Install Ruby version
-
-```shell
-rvm install ruby-head
-```
-
-```shell
-rvm --default use 2.4.0
-```
-
-```shell
-gem install bundler
-```
 
 ## Install Composer
 
@@ -468,12 +463,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 ```shell
 defaults write com.apple.finder ShowStatusBar -bool true
-```
-
-### Disable unidentified developer warnings
-
-```shell
-sudo spctl --master-disable
 ```
  -->
 
