@@ -190,7 +190,7 @@ brew install postgresql
   ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
   launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
   ```
-- Install the `pg` gem
+- Install the `pg` gem  ************** <-- PERMISSIONS ERROR
   ```
   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
   ```
