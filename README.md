@@ -31,9 +31,10 @@ NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles
 
 ### Install Purchased
 
-- Install CopyClip
-- Install Magnet
-- Install Evernote, sign in
+- CopyClip
+- Magnet
+- Toggl Desktop
+- Evernote, sign in
 - Restart computer again after all updates
 - Check Console for errors
 
