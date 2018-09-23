@@ -79,6 +79,7 @@ May get `Error: Already signed in`
 
 ```shell
 brew install git
+brew install graphviz
 brew cask install spectacle
 brew cask install sublime-text
 brew cask install atom
@@ -209,6 +210,10 @@ brew install postgresql
   ```
   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
   ```
+- Pin `postgres` in homebrew so it does not get updated automatically
+  ```
+  brew pin postgresql
+  ```
 
 ## Install MySQL
 TBD
@@ -322,6 +327,7 @@ Create SSH keys and connect them to GitHub and Bitbucket accounts.
   - Change background color to softer gray
 
 ### Configure `~/.bash_profile`
+Note: there is a dotfiles repo that has this information in it. See Dotfiles section below.
 ```
 subl ~/.bash_profile
 ```
@@ -329,6 +335,8 @@ subl ~/.bash_profile
 ```shell
 # Update and clean homebrow in one command
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+# note: psql is 'pinned' by using brew pin postgresql so that it's not updated automatically
+# to upgrade psql, first do brew unpin postgresql
 
 # prompt colors!
 RED='\[\e[1;31m\]'
@@ -401,8 +409,8 @@ from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_p
 ### Load Snippets
 from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
 
-
-## Configure CopyClip
+## Configure Sublime
+https://packagecontrol.io/installation
 
 ## Configure Magnet
 - Start at login
@@ -439,6 +447,18 @@ from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_s
   gem install rails -v 5.2.0
   ```
 
+
+## Mac Preferences (Round 2)
+- **Desktop & Screen Saver > Desktop:** Set background image to something from Dropbox/\_PHOTOS/desktop_pictures
+- **Printers & Scanners >** Add Printer
+- **Users & Groups >** Change login photo to something better
+- Statup applications: TBD
+
+
+## Put Computer details in Google Doc
+
+- Create a file in [this folder](https://drive.google.com/drive/folders/0B2alZr-hRu53Ulh2dkhhOEEyNVU) with the stats for the computer. This will be useful later when I need to access that information remotely.
+
 <!--
 
 
@@ -452,19 +472,7 @@ npm install --global gulp-cli
 
 
 
-## Install Composer
 
-```shell
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-```
-
-
-## Mac Preferences (Round 2)
-
-- **Printers & Scanners >** TBD
-- **Users & Groups >** TBD
-- Statup applications
 
 
 ### Show Library folder
@@ -493,12 +501,5 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
  -->
-
-
-## Put Computer details in Google Doc
-
-- Create a file in [this folder](https://drive.google.com/drive/folders/0B2alZr-hRu53Ulh2dkhhOEEyNVU) with the stats for the computer. This will be useful later when I need to access that information remotely.
-
-
 
 
