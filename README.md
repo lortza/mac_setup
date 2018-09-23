@@ -188,6 +188,12 @@ source $(brew --prefix nvm)/nvm.sh
   gem install bundler
   ```
 
+## Install Yarn
+See [docs](https://yarnpkg.com/lang/en/docs/install/#mac-stable). Exclude installing Node.js so that nvm’s version of Node.js is used.
+```
+brew install yarn --without-node
+```
+
 ## Install PostgreSQL
 A [useful guide](https://launchschool.com/blog/how-to-install-postgresql-on-a-mac)
 
@@ -317,6 +323,24 @@ Create SSH keys and connect them to GitHub and Bitbucket accounts.
 - [Add SSH key to GitHub](https://github.com/settings/keys) (Helpful [guide](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/))
 - [Add SSH key to Bitbucket](https://bitbucket.org/account/user/annerichardson/ssh-keys/)
 
+## Install Heroku CLI
+- Go to Heroku's [Dev Center](https://devcenter.heroku.com/articles/heroku-cli) for reference
+- Install the cli tools
+  ```
+  brew install heroku/brew/heroku
+  ```
+- Set up autocomplete (instructions [here](https://docs.brew.sh/Shell-Completion)) by adding this to the `.bashrc` file.
+  ```
+  if type brew 2&>/dev/null; then
+    for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
+      source "$completion_file"
+    done
+  fi
+  ```
+- Then run:
+  ```
+  heroku autocomplete --refresh-cache
+  ```
 
 ## Set up Terminal Preferences
 
