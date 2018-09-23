@@ -399,15 +399,14 @@ mkdir personal_projects
 ```
 
 ## Configure dotfiles
-My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
-My 2017 Mac dotfiles repo https://github.com/lortza/dotfiles
+- My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
+- My 2017 Mac dotfiles repo https://github.com/lortza/dotfiles
 
 ## Configure Atom
 
-### Install Packages
-from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
-### Load Snippets
-from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
+- Install Packages from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
+- Load Snippets from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
+- Restart computer & check for console errors
 
 ## Configure Sublime
 https://packagecontrol.io/installation
@@ -418,9 +417,7 @@ https://packagecontrol.io/installation
 - Shortcuts:
 ![alt](/screenshots/magnet.png)
 
-## Pin apps and set up `brew up`
-
-## Install Ruby and Rails versions for Crucial projects
+## Install Ruby and Rails versions for Priority Projects
 
 - tmdb:
   ```
@@ -454,13 +451,38 @@ https://packagecontrol.io/installation
 - **Users & Groups >** Change login photo to something better
 - Statup applications: TBD
 
+## Sign In to all Slack Teams
+Use Magic links because it is way easier when doing so many at a time.
+```
+localflavor
+yoloteamslack
+wwc-atx
+austinrb
+austinonrails
+refreshaustin
+vikingcodeschool
+nola
+productmatchr
+denver-devs
+womenintech
+rubyonrails-link
+rubydevelopers
+```
 
-## Put Computer details in Google Doc
+## Install Backblaze
+TBD
 
+## Set up TimeMachine
+TBD
+
+## Open & Sync Dropbox
+- Sign in & choose "select folders"
+- Deselect `iTunes Music` so it is not synced onto this computer
+
+## Put Computer Details in Google Doc
 - Create a file in [this folder](https://drive.google.com/drive/folders/0B2alZr-hRu53Ulh2dkhhOEEyNVU) with the stats for the computer. This will be useful later when I need to access that information remotely.
 
 <!--
-
 
 ## npm
 
@@ -469,11 +491,6 @@ https://packagecontrol.io/installation
 ```shell
 npm install --global gulp-cli
 ```
-
-
-
-
-
 
 ### Show Library folder
 
