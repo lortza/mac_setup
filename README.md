@@ -405,11 +405,30 @@ from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_s
 
 ## Install Ruby and Rails versions for Crucial projects
 
-- tmdb:   ruby 2.2.2, rails 4.2.3
-- tarot:  ruby 2.4.2, rails 5.1.4
-- ftpg:   ruby 2.3.7, rails 4.1.2
-- pp:     ruby 2.5.1, rails 5.2.0
-
+- tmdb:
+  ```
+  rvm install "ruby-2.2.2"
+  rvm 2.2.2
+  gem install rails -v 4.2.3
+  ```
+- tarot:
+  ```
+  rvm install "ruby-2.4.2"
+  rvm 2.4.2
+  gem install rails -v 5.1.4
+  ```
+- ftpg:
+  ```
+  rvm install "ruby-2.3.7"
+  rvm 2.3.7
+  gem install rails -v 4.1.2
+  ```
+- pp:
+  ```
+  rvm install "ruby-2.5.1"
+  rvm 2.5.1
+  gem install rails -v 5.2.0
+  ```
 
 <!--
 
