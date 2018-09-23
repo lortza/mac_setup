@@ -32,6 +32,7 @@ NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles
 ### Install Purchased
 
 - Install CopyClip
+- Install Magnet
 - Install Evernote, sign in
 - Restart computer again after all updates
 - Check Console for errors
@@ -402,6 +403,14 @@ from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_s
 
 
 ## Configure CopyClip
+
+## Configure Magnet
+- Start at login
+- Allow it to control computer
+- Shortcuts:
+![alt](/screenshots/magnet.png)
+
+## Pin apps and set up `brew up`
 
 ## Install Ruby and Rails versions for Crucial projects
 
