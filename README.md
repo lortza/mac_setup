@@ -45,9 +45,10 @@ Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Tap Cask
+Tap the Support Services
 ```
 brew tap caskroom/cask
+brew tap homebrew/services
 ```
 
 Install Google Chrome
@@ -170,13 +171,29 @@ source $(brew --prefix nvm)/nvm.sh
   rvm autolibs homebrew
   ```
 
-## Install Postgresql
+## Install PostgreSQL
+A [useful guide](https://launchschool.com/blog/how-to-install-postgresql-on-a-mac)
 
 ```
 brew install postgresql
 ```
-- Copy terminal output into [Evernote file](tbd)
+- Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=e2876634-af73-42ab-9454-b248e68fe942&s=s266&ses=1&sh=5&sds=5&x=postgres%2520installation&)
+- Check that postgresql can be started and stopped
+  ```
+  brew services start postgresql
 
+  # and shut it down again for now
+  brew services start postgresql
+  ```
+- Enable auto-startup
+  ```
+  ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+  ```
+- Install the `pg` gem
+  ```
+  gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+  ```
 
 ## Configure Git
 
@@ -321,8 +338,7 @@ alias glo='git log --oneline'
 
 Set up file structure in `/Users/annerichardson/`
 ```
-mkdir software_development
-cd software_development
+mkdir software_development && cd $_
 mkdir contract_work
 mkdir learning_academies
 mkdir open_source
