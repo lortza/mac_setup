@@ -280,12 +280,19 @@ Create SSH keys and connect them to GitHub and Bitbucket accounts.
 - [Add SSH key to Bitbucket](https://bitbucket.org/account/user/annerichardson/ssh-keys/)
 
 
+## Set up Terminal Preferences
 
+- Open **Terminal > Preferences**
+- **Terminal > Preferences > General:** Open new window with "Pro"
+- **Terminal > Preferences > Profiles:** Set "Pro" as default
+- **Terminal > Preferences > Profiles > Colors & Backgrounds:**
+  - Change opacity to 100%
+  - Change background color to softer gray
 
-
-## Bash
-
-### Config - `~/.bash_profile`
+### Configure `~/.bash_profile`
+```
+subl ~/.bash_profile
+```
 
 ```shell
 # Update and clean homebrow in one command
@@ -320,7 +327,9 @@ parse_git_branch() {
 }
 
 # Format to user@host:/path/to/directory (branch-name)
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
+# export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
+export PS1="$purple\u$green\$(parse_git_branch)$LIGHTBLUE \W $ $reset"
+
 
 # Git Aliases
 alias gs='git status'
@@ -334,9 +343,7 @@ alias glp="git log --pretty=format:'%h - %an, %ar: %s'"
 alias glo='git log --oneline'
 ```
 
-
-
-Set up file structure in `/Users/annerichardson/`
+## Set up file structure in `/Users/annerichardson/`
 ```
 mkdir software_development && cd $_
 mkdir contract_work
