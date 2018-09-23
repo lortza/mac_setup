@@ -1,6 +1,6 @@
 # macOS High Sierra v. 10.13 Setup
 
-This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for web development.
+This is a simple list of instructions to make setting up my MacBook Pro as fast and efficient as possible for web development.
 
 I followed [this gist by mikevallano](https://gist.github.com/mikevallano/d0964aeff471453060cf5c096859adac) and forked [this repo by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) as guides to made this version.
 
@@ -72,7 +72,26 @@ May get `Error: Already signed in`
 
 ### Install Apps
 
-#### Option 1: Set up Brewfile -- I have not done this
+#### Option 1: Install Manually -- I did this
+
+```shell
+brew install git
+brew cask install spectacle
+brew cask install sublime-text
+brew cask install atom
+brew cask install harvest
+brew cask install slack
+brew cask install dropbox
+brew cask install firefox
+brew cask install gimp
+brew cask install spotify
+mas install 803453959        # Slack
+```
+
+- Check App Store for Updates & run them
+- Restart Mac & check Console for errors
+
+#### Option 2: Set up Brewfile -- I have not done this
 Brew bundle's uild is currently failing, so I chose to do the manual install on 9/21/18.
 
 ```shell
@@ -100,26 +119,6 @@ mas 'Slack', id: 803453959
 brew bundle
 ```
 Restart Mac & check Console for errors
-
-#### Option 2: Install Manually -- I did this
-
-```shell
-brew install git
-brew cask install spectacle
-brew cask install sublime-text
-brew cask install atom
-brew cask install harvest
-brew cask install slack
-brew cask install dropbox
-brew cask install firefox
-brew cask install gimp
-brew cask install spotify
-mas install 803453959        # Slack
-```
-
-- Check App Store for Updates & run them
-- Restart Mac & check Console for errors
-
 
 ## Install Node.js
 
@@ -170,12 +169,13 @@ source $(brew --prefix nvm)/nvm.sh
   ```
   rvm autolibs homebrew
   ```
-- Install ruby
+- Install latest version of ruby
   ```shell
   rvm install ruby-head
   ```
 - Set default ruby version
   ```shell
+  rvm install "ruby-2.5.1"
   rvm --default use 2.5.1
   ```
 - Install bundler
@@ -202,7 +202,7 @@ brew install postgresql
   ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
   launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
   ```
-- Install the `pg` gem  ************** <-- PERMISSIONS ERROR
+- Install the `pg` gem
   ```
   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
   ```
@@ -252,6 +252,18 @@ In the `.gitconfig` file:
 [merge]
   conflictstyle = diff3
 ```
+
+- Create `git-completion` file
+  ```
+  touch ~/git-completion.bash
+  ```
+- Add copy all contents from the [master file](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) into it and save
+- Create `git-prompt` file
+  ```
+  touch ~/git-prompt.sh
+  ```
+- Add copy all contents from the [master file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh) into it and save
+
 
 ## SSH Keys
 Create SSH keys and connect them to GitHub and Bitbucket accounts.
@@ -342,6 +354,12 @@ parse_git_branch() {
 # export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
 export PS1="$purple\u$green\$(parse_git_branch)$LIGHTBLUE \W $ $reset"
 
+# Enable tab completion
+source ~/git-completion.bash
+
+# Change command prompt
+source ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
 
 # Git Aliases
 alias gs='git status'
@@ -377,6 +395,11 @@ from https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_s
 
 
 ## Configure CopyClip
+
+## Install Ruby and Rails versions for Crucial projects
+
+- tmdb: ruby 2.2.2, rails 4.2.3
+- tarot: ruby 2.4.2, rails 5.1.4
 
 
 <!--
