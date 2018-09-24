@@ -81,6 +81,7 @@ May get `Error: Already signed in`
 ```shell
 brew install git
 brew install graphviz
+brew install imagemagick
 brew cask install spectacle
 brew cask install sublime-text
 brew cask install atom
@@ -223,54 +224,64 @@ brew install postgresql
   ```
 
 ## Install MySQL
-TBD
+```
+brew install mysql
+```
+- Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=3dfb2610-b838-4047-8147-5ca0e0055311&s=s266&ses=1&sh=5&sds=5&x=mysql%2520instal&)
+- Start agent for current version
+  ```
+  ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+  ```
+- Pin `mysql` in homebrew so it does not get updated automatically
+  ```
+  brew pin mysql
+  ```
+
 
 ## Configure Git
-
 This sets up the defaults for how you interact with Git.
 
-Set up the github config file
-```
-subl ~/.gitconfig
-```
-
-In the `.gitconfig` file:
-```shell
-[user]
-  name   = Firstname Lastname
-  email  = you@example.com
-[github]
-  user   = my_github_username
-[alias]
-  a      = add
-  c      = commit
-  ca     = commit -a
-  cam    = commit -am
-  cm     = commit -m
-  s      = status
-  pom    = push origin master
-  pog    = push origin gh-pages
-  puom   = pull origin master
-  puog   = pull origin gh-pages
-  cob    = checkout -b
-  co     = checkout
-  l      = log --oneline --decorate --graph
-  lall   = log --oneline --decorate --graph --all
-  ls     = log --oneline --decorate --graph --stat
-  lt     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
-[credential]
-  helper = osxkeychain
-[core]
-  editor = subl -n -w
-[color]
-  diff = auto
-  status = auto
-  branch = auto
-  ui = auto
-[merge]
-  conflictstyle = diff3
-```
-
+- Set up the github config file
+  ```
+  subl ~/.gitconfig
+  ```
+- In the `.gitconfig` file:
+  ```shell
+  [user]
+    name   = Firstname Lastname
+    email  = you@example.com
+  [github]
+    user   = my_github_username
+  [alias]
+    a      = add
+    c      = commit
+    ca     = commit -a
+    cam    = commit -am
+    cm     = commit -m
+    s      = status
+    pom    = push origin master
+    pog    = push origin gh-pages
+    puom   = pull origin master
+    puog   = pull origin gh-pages
+    cob    = checkout -b
+    co     = checkout
+    l      = log --oneline --decorate --graph
+    lall   = log --oneline --decorate --graph --all
+    ls     = log --oneline --decorate --graph --stat
+    lt     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
+  [credential]
+    helper = osxkeychain
+  [core]
+    editor = subl -n -w
+  [color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+  [merge]
+    conflictstyle = diff3
+  ```
 - Create `git-completion` file
   ```
   touch ~/git-completion.bash
@@ -431,6 +442,7 @@ mkdir personal_projects
 
 - Install Packages from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
 - Load Snippets from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
+- **Settings > Core > Exclude VCS Ignored Paths:** false
 - Restart computer & check for console errors
 
 ## Configure Sublime
