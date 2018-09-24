@@ -91,6 +91,7 @@ brew cask install dropbox
 brew cask install firefox
 brew cask install gimp
 brew cask install spotify
+brew cask install zoomus     # Zoom.us
 mas install 803453959        # Slack
 ```
 
@@ -435,8 +436,12 @@ mkdir personal_projects
 - My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
 - My 2017 Mac dotfiles repo https://github.com/lortza/dotfiles
 
-## Configure Atom
+## Show Library folder
+```shell
+chflags nohidden ~/Library
+```
 
+## Configure Atom
 - Install Packages from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
 - Load Snippets from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
 - **Settings > Core > Exclude VCS Ignored Paths:** false
@@ -524,12 +529,6 @@ TBD
 
 ```shell
 npm install --global gulp-cli
-```
-
-### Show Library folder
-
-```shell
-chflags nohidden ~/Library
 ```
 
 ### Show hidden files
