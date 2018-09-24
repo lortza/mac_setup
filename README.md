@@ -98,7 +98,7 @@ mas install 803453959        # Slack
 - Restart Mac & check Console for errors
 
 #### Option 2: Set up Brewfile -- I have not done this
-Brew bundle's uild is currently failing, so I chose to do the manual install on 9/21/18.
+Brew bundle's build is currently failing, so I chose to do the manual install on 9/21/18.
 
 ```shell
 touch Brewfile
@@ -127,11 +127,10 @@ brew bundle
 Restart Mac & check Console for errors
 
 ## Install Node.js
-
-```
-brew install node
-```
-
+- Install node
+  ```
+  brew install node
+  ```
 - Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=12e4acd2-a9a1-41a7-aabc-5ceab533de79&s=s266&ses=4&sh=2&sds=5&)
 - Check that Node works
   ```
@@ -139,14 +138,12 @@ brew install node
   ```
 - Exit node
 
-
 ## Install NVM
-
 - Install [Node Version Manager](https://github.com/creationix/nvm/blob/master/README.md)
-```
-brew install nvm
-source $(brew --prefix nvm)/nvm.sh
-```
+  ```
+  brew install nvm
+  source $(brew --prefix nvm)/nvm.sh
+  ```
 - Copy terminal output into [Evernote file](https://www.evernote.com/Home.action?_sourcePage=jpcfeMMHivriMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=sw-znwOvMVg3yWPvuidLz-TPR6I9Jhx8&hpts=1537402481839&showSwitchService=true&usernameImmutable=false&rememberMe=true&login=&login=Sign+in&login=true&username=richardson.ae%40gmail.com&hptsh=uOH2K8MR8aY694GUXFCd468%2FbJQ%3D#n=aa55a413-32c8-40a7-8956-ee1da7d7fbca&s=s266&ses=1&sh=5&sds=5&x=nvm%2520installation&)
 - Run nvm
   ```
@@ -555,5 +552,3 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
  -->
-
-
