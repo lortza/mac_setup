@@ -2,7 +2,10 @@
 
 This is a simple list of instructions to make setting up my MacBook Pro as fast and efficient as possible for web development.
 
-I followed [this gist by mikevallano](https://gist.github.com/mikevallano/d0964aeff471453060cf5c096859adac) and forked [this repo by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) as guides to made this version.
+This guide is based on:
+- [this gist by mikevallano](https://gist.github.com/mikevallano/d0964aeff471453060cf5c096859adac)
+- [this repo](https://github.com/taniarascia/setup),
+- [and this post by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
 
 NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles)
 
@@ -221,7 +224,9 @@ brew install postgresql
   brew pin postgresql
   ```
 
-## Install MySQL
+## Install MySQL -- If needed
+Decide whether MySQL or MariaDB is needed. Install only 1, as they conflict.
+
 ```
 brew install mysql
 ```
@@ -272,6 +277,7 @@ This sets up the defaults for how you interact with Git.
     helper = osxkeychain
   [core]
     editor = subl -n -w
+    excludesfile = /Users/my_computer_username/.gitignore_global
   [color]
     diff = auto
     status = auto
