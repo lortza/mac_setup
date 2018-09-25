@@ -4,7 +4,7 @@ This is a simple list of instructions to make setting up my MacBook Pro as fast 
 
 This guide is based on:
 - [this gist by mikevallano](https://gist.github.com/mikevallano/d0964aeff471453060cf5c096859adac)
-- [this repo](https://github.com/taniarascia/setup),
+- [this repo](https://github.com/taniarascia/mac),
 - [and this post by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
 
 NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles)
@@ -102,7 +102,7 @@ mas install 803453959        # Slack
 - Restart Mac & check Console for errors
 
 #### Option 2: Set up Brewfile -- I have not done this
-There is another way to do this, which uses `Brewfile` to install everything all at once. It is outlined [here](https://github.com/taniarascia/mac). 
+There is another way to do this, which uses `Brewfile` to install everything all at once. It is outlined [here](https://github.com/taniarascia/mac).
 
 ## Install Node.js
 - Install node
