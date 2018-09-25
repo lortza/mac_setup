@@ -428,7 +428,12 @@ chflags nohidden ~/Library
 - Restart computer & check for console errors
 
 ## Configure Sublime
-https://packagecontrol.io/installation
+- Install package control: https://packagecontrol.io/installation
+- Install Packages:
+  - GitGutter
+- Set up Preferences
+- Add folder of snippets
+- Add purchase key
 
 ## Configure Magnet
 - Start at login
