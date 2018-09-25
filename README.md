@@ -483,6 +483,21 @@ https://packagecontrol.io/installation
   gem install rails -v 5.2.0
   ```
 
+## Install awesome_print
+- [Globally install awesome_print](https://pennyforyourcode.com/installing-a-ruby-gem-globally-in-rvm-ffa7222f7e7)
+  ```
+  rvm @global do gem install awesome_print end
+  ```
+- Add awesome_print to irb
+  ```
+  subl ~/.irbrc
+  ```
+  Add these lines to `.irbrc`
+  ```
+  require 'awesome_print'
+  AwesomePrint.irb!
+  ```
+- There may be a little more to this process...
 
 ## Mac Preferences (Round 2)
 - **Desktop & Screen Saver > Desktop:** Set background image to something from Dropbox/\_PHOTOS/desktop_pictures
