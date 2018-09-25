@@ -99,33 +99,7 @@ mas install 803453959        # Slack
 - Restart Mac & check Console for errors
 
 #### Option 2: Set up Brewfile -- I have not done this
-Brew bundle's build is currently failing, so I chose to do the manual install on 9/21/18.
-
-```shell
-touch Brewfile
-```
-
-```shell
-brew 'git'
-
-cask 'spectacle'
-cask 'sublime-text'
-cask 'atom'
-cask 'harvest'
-cask 'slack'
-cask 'dropbox'
-cask 'firefox'
-cask 'spectacle'
-cask 'gimp'
-cask 'spotify'
-
-mas 'Slack', id: 803453959
-```
-
-```shell
-brew bundle
-```
-Restart Mac & check Console for errors
+There is another way to do this, which uses `Brewfile` to install everything all at once. It is outlined [here](https://github.com/taniarascia/mac). 
 
 ## Install Node.js
 - Install node
