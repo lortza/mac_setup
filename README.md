@@ -424,6 +424,7 @@ chflags nohidden ~/Library
 ## Configure Atom
 - Install Packages from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
 - Load Snippets from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
+- **Settings > Packages > Autosave:** Check "Enabled" 
 - **Settings > Core > Exclude VCS Ignored Paths:** false
 - Restart computer & check for console errors
 
