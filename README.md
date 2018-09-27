@@ -4,7 +4,7 @@ This is a simple list of instructions to make setting up my MacBook Pro as fast 
 
 This guide is based on:
 - [this gist by mikevallano](https://gist.github.com/mikevallano/d0964aeff471453060cf5c096859adac)
-- [this repo](https://github.com/taniarascia/setup),
+- [this repo](https://github.com/taniarascia/mac),
 - [and this post by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
 
 NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles)
@@ -102,33 +102,7 @@ mas install 803453959        # Slack
 - Restart Mac & check Console for errors
 
 #### Option 2: Set up Brewfile -- I have not done this
-Brew bundle's build is currently failing, so I chose to do the manual install on 9/21/18.
-
-```shell
-touch Brewfile
-```
-
-```shell
-brew 'git'
-
-cask 'spectacle'
-cask 'sublime-text'
-cask 'atom'
-cask 'harvest'
-cask 'slack'
-cask 'dropbox'
-cask 'firefox'
-cask 'spectacle'
-cask 'gimp'
-cask 'spotify'
-
-mas 'Slack', id: 803453959
-```
-
-```shell
-brew bundle
-```
-Restart Mac & check Console for errors
+There is another way to do this, which uses `Brewfile` to install everything all at once. It is outlined [here](https://github.com/taniarascia/mac).
 
 ## Install Node.js
 - Install node
@@ -450,11 +424,17 @@ chflags nohidden ~/Library
 ## Configure Atom
 - Install Packages from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
 - Load Snippets from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
+- **Settings > Packages > Autosave:** Check "Enabled" 
 - **Settings > Core > Exclude VCS Ignored Paths:** false
 - Restart computer & check for console errors
 
 ## Configure Sublime
-https://packagecontrol.io/installation
+- Install package control: https://packagecontrol.io/installation
+- Install Packages:
+  - GitGutter
+- Set up Preferences
+- Add folder of snippets
+- Add purchase key
 
 ## Configure Magnet
 - Start at login
@@ -489,6 +469,21 @@ https://packagecontrol.io/installation
   gem install rails -v 5.2.0
   ```
 
+## Install awesome_print
+- [Globally install awesome_print](https://pennyforyourcode.com/installing-a-ruby-gem-globally-in-rvm-ffa7222f7e7)
+  ```
+  rvm @global do gem install awesome_print end
+  ```
+- Add awesome_print to irb
+  ```
+  subl ~/.irbrc
+  ```
+  Add these lines to `.irbrc`
+  ```
+  require 'awesome_print'
+  AwesomePrint.irb!
+  ```
+- There may be a little more to this process...
 
 ## Mac Preferences (Round 2)
 - **Desktop & Screen Saver > Desktop:** Set background image to something from Dropbox/\_PHOTOS/desktop_pictures
