@@ -1,4 +1,4 @@
- action_cable_car_status_development         | 6841 kB |
+ action_cable_car_status_development         | 6841 kB | -- in dropbox
  assignment_association_practice_development | 7369 kB |
  assignment_basic_auth_development           | 6641 kB |
  assignment_danebook_goes_live_development   | 6505 kB |
@@ -32,7 +32,7 @@
  dnd_tools_development                       | 7905 kB |
  double_form_submit_development              | 6761 kB |
  events3_development                         | 7161 kB |
- food_planner_development                    | 7131 kB |
+ food_planner_development                    | 7131 kB | -- restored to new computer
  habtm_forty_facets_rails42_development      | 7153 kB |
  habtm_practice_development                  | 6761 kB |
  holistic_development                        | 6969 kB |
@@ -51,7 +51,7 @@
  pmr2_development                            | 12 MB   |
  pmr_chewy_development                       | 8033 kB |
  pmr_devise_retrofit_development             | 7145 kB |
- postgres                                    | 6619 kB | pg_default | default administrative conne
+ postgres                                    | pg_default |
  practice_rails_migrations_development       | 6753 kB |
  product_pricing_development                 | 7083 kB |
  productmatch_development                    | 27 MB   |
@@ -74,15 +74,13 @@
  single_page_crud_development                | 6769 kB |
  snowmatchr_development                      | 23 MB   |
  sorrygirl_development                       | 6827 kB |
- stockaid_development                        | 8555 kB |
+ stockaid_development                        | 8555 kB | -- in dropbox
  study_buddy_development                     | 6889 kB |
  survey_practice_development                 | 6841 kB |
  tarot_db_development                        | 7097 kB |
- tarot_development                           | 7603 kB |
- template0                                   | localflavor | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/localflavor             +| 6497 kB | pg_default | unmodifiable empty database
-                                             |             |          |             |             | localflavor=CTc/localflavor |         |            |
- template1                                   | localflavor | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/localflavor             +| 6505 kB | pg_default | default template for new databases
-                                             |             |          |             |             | localflavor=CTc/localflavor |         |            |
+ tarot_development                           | 7603 kB | -- restored to new computer
+ template0                                   | unmodifiable empty database | 
+ template1                                   | localflavor |
  testdb                                      | 6505 kB |
- tmdb-moviequeue_development                 | 8131 kB |
+ tmdb-moviequeue_development                 | 8131 kB | -- restored to new computer
  today-i-learned_development                 | 6785 kB |
