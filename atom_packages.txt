@@ -1,0 +1,22 @@
+Recommended Atom Packages
+
+'platformio-ide-terminal' by platformio
+terminal windows inside of Atom
+
+'reindent' by kbrose
+gives you a keyboard shortcut for realigning your code
+
+'teletype' by atom
+lets you do that screenshare-esque thing
+
+'linter' by steelbrain
+install before 'linter-rubocop' by AtomLinter
+
+'linter-rubocop' by Atom Linter
+
+
+language packages:
+support suntax for coloring
+'language-ruby'
+language-ruby-on-rails'
+'language-slim'
