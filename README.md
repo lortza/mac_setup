@@ -413,8 +413,8 @@ mkdir personal_projects
 ```
 
 ## Configure dotfiles
-- My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
 - My 2017 Mac dotfiles repo https://github.com/lortza/dotfiles
+- My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
 
 ## Show Library folder
 ```shell
@@ -422,8 +422,8 @@ chflags nohidden ~/Library
 ```
 
 ## Configure Atom
-- Install Packages from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_packages-txt
-- Load Snippets from: https://gist.github.com/lortza/ab0c5c9b436c9104a942370cb7e85186#file-atom_snippets-cson
+- Install Packages from: https://github.com/lortza/mac_setup/blob/master/atom_packages.txt
+- Load Snippets from: https://github.com/lortza/mac_setup/blob/master/atom_snippets.cson
 - **Settings > Packages > Autosave:** Check "Enabled" 
 - **Settings > Core > Exclude VCS Ignored Paths:** false
 - Restart computer & check for console errors
