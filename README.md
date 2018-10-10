@@ -424,9 +424,9 @@ chflags nohidden ~/Library
 ## Configure Atom
 - **Settings > Packages > Autosave:** Check "Enabled"
 - **Settings > Core > Exclude VCS Ignored Paths:** false
-- Install Packages from this list: https://github.com/lortza/mac_setup/blob/master/atom/list_of_packages.txt
+- Install Packages from this list: https://github.com/lortza/mac_setup/blob/master/atom_setup/list_of_packages.txt
 - Paste settings into all of the config files in this folder:
-- Atom Folder: https://github.com/lortza/mac_setup/blob/master/atom
+- Atom Folder: https://github.com/lortza/mac_setup/tree/master/atom_setup
   - config.cson
   - keymap.cson
   - snippets.cson
