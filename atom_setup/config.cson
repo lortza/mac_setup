@@ -1,0 +1,22 @@
+"*":
+  autosave:
+    enabled: true
+  core:
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".git"
+      "log"
+      "tmp"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    showInvisibles: true
+  "exception-reporting":
+    userId: "bb517266-aedc-4fe3-acba-2604210b4938"
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
+  welcome:
+    showOnStartup: false
+".slim.text":
+  whitespace:
+    removeTrailingWhitespace: false

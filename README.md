@@ -422,10 +422,15 @@ chflags nohidden ~/Library
 ```
 
 ## Configure Atom
-- Install Packages from: https://github.com/lortza/mac_setup/blob/master/atom_packages.txt
-- Load Snippets from: https://github.com/lortza/mac_setup/blob/master/atom_snippets.cson
-- **Settings > Packages > Autosave:** Check "Enabled" 
+- **Settings > Packages > Autosave:** Check "Enabled"
 - **Settings > Core > Exclude VCS Ignored Paths:** false
+- Install Packages from this list: https://github.com/lortza/mac_setup/blob/master/atom/list_of_packages.txt
+- Paste settings into all of the config files in this folder:
+- Atom Folder: https://github.com/lortza/mac_setup/blob/master/atom
+  - config.cson
+  - keymap.cson
+  - snippets.cson
+  - styles.less
 - Restart computer & check for console errors
 
 ## Configure Sublime
