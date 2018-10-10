@@ -83,8 +83,6 @@ May get `Error: Already signed in`
 
 ```shell
 brew install git
-brew install graphviz
-brew install imagemagick
 brew cask install spectacle
 brew cask install sublime-text
 brew cask install atom
@@ -96,6 +94,9 @@ brew cask install gimp
 brew cask install spotify
 brew cask install zoomus     # Zoom.us
 mas install 803453959        # Slack
+brew install graphviz
+brew install imagemagick
+brew install ghostscript
 ```
 
 - Check App Store for Updates & run them
