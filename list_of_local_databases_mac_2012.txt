@@ -19,9 +19,9 @@
  cognitive2_development                      | 6841 kB |
  critters                                    | 6713 kB |
  critters_development                        | 6801 kB |
- db/development                              | 6873 kB |
+ db/development                              | 6873 kB |  <-- project_todo_twilio
  db/project_viking_store/development         | 8041 kB |
- db/test                                     | 6665 kB |
+ db/test                                     | 6665 kB |  <-- project_todo_twilio
  dbswitcher1_development                     | 6593 kB |
  dbswitcher2_development                     | 6649 kB |
  dbtester                                    | 6593 kB |
@@ -74,13 +74,16 @@
  single_page_crud_development                | 6769 kB |
  snowmatchr_development                      | 23 MB   |
  sorrygirl_development                       | 6827 kB |
- stockaid_development                        | 8555 kB | -- in dropbox
+ stockaid_development                        | 8555 kB | done
  study_buddy_development                     | 6889 kB |
  survey_practice_development                 | 6841 kB |
  tarot_db_development                        | 7097 kB |
  tarot_development                           | 7603 kB | -- restored to new computer
- template0                                   | unmodifiable empty database | 
+ template0                                   | unmodifiable empty database |
  template1                                   | localflavor |
+                                |             |          |             |             | localflavor=CTc/localflavor |         |            |
+                                             |             |          |             |             | localflavor=CTc/localflavor |         |            |
+                                             |             |          |             |             | localflavor=CTc/localflavor |         |            |
  testdb                                      | 6505 kB |
  tmdb-moviequeue_development                 | 8131 kB | -- restored to new computer
  today-i-learned_development                 | 6785 kB |
