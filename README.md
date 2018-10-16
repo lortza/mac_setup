@@ -91,6 +91,7 @@ brew cask install slack
 brew cask install dropbox
 brew cask install firefox
 brew cask install gimp
+brew cask install postman
 brew cask install spotify
 brew cask install zoomus     # Zoom.us
 mas install 803453959        # Slack
