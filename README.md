@@ -94,6 +94,7 @@ brew cask install gimp
 brew cask install postman
 brew cask install spotify
 brew cask install zoomus     # Zoom.us
+brew cask install licecap
 mas install 803453959        # Slack
 brew install graphviz
 brew install imagemagick
