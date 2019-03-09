@@ -49,4 +49,16 @@
 		"description": "html comment"
 	},
 
+  "div class": {
+    "scope": "erb",
+		"prefix": "divc",
+		"body": [
+      '<div class="${1}">'
+        "${2}"
+      "</div>"
+		],
+		"description": "div with class"
+	},
+
+
 }
