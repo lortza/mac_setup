@@ -7,7 +7,6 @@ This guide is based on:
 - [this repo](https://github.com/taniarascia/mac),
 - [and this post by taniarascia](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
 
-NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles)
 
 ## Set System Preferences (Round 1)
 
@@ -44,6 +43,27 @@ NOTE: I just created a `dotfiles` repo [here](https://github.com/lortza/dotfiles
 ## Clean up Dock
 
 - Remove all unused icons from dock
+
+## Configure dotfiles
+Cloning a dotfiles repo into your root folder will handle the setup of a lot of basic settings.
+- My 2017 Mac dotfiles repo https://github.com/lortza/dotfiles
+- My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
+
+### What's Configured by dotfiles repo
+- .bash_profile
+- .bashrc
+- .gemrc
+- .gitconfig
+- .gitignore
+- .gitignore_global
+- .irbrc
+- .my_scripts.sh
+- .profile
+- .rvmrc
+- .zlogin
+- .zshrc
+- git-completion.bash _you may want to copy a fresh version from the [master file](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) in here_
+- git-prompt.sh _you may want to copy a fresh version of the [master file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh) in here_
 
 ## Homebrew
 
@@ -220,64 +240,6 @@ brew install mysql
   ```
 
 
-## Configure Git
-This sets up the defaults for how you interact with Git.
-
-- Set up the github config file
-  ```
-  subl ~/.gitconfig
-  ```
-- In the `.gitconfig` file:
-  ```shell
-  [user]
-    name   = Firstname Lastname
-    email  = you@example.com
-  [github]
-    user   = my_github_username
-  [alias]
-    a      = add
-    c      = commit
-    ca     = commit -a
-    cam    = commit -am
-    cm     = commit -m
-    s      = status
-    pom    = push origin master
-    pog    = push origin gh-pages
-    puom   = pull origin master
-    puog   = pull origin gh-pages
-    cob    = checkout -b
-    co     = checkout
-    l      = log --oneline --decorate --graph
-    lall   = log --oneline --decorate --graph --all
-    ls     = log --oneline --decorate --graph --stat
-    lt     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
-  [credential]
-    helper = osxkeychain
-  [core]
-    editor = subl -n -w
-    excludesfile = /Users/my_computer_username/.gitignore_global
-  [color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = auto
-  [merge]
-    conflictstyle = diff3
-  ```
-- Create `git-completion` file
-  ```
-  touch ~/git-completion.bash
-  subl ~/git-completion.bash
-  ```
-- Add copy all contents from the [master file](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) into it and save
-- Create `git-prompt` file
-  ```
-  touch ~/git-prompt.sh
-  subl ~/git-prompt.sh
-  ```
-- Add copy all contents from the [master file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh) into it and save
-
-
 ## SSH Keys
 Create SSH keys and connect them to GitHub and Bitbucket accounts.
 
@@ -344,68 +306,6 @@ Create SSH keys and connect them to GitHub and Bitbucket accounts.
   - Change opacity to 100%
   - Change background color to softer gray
 
-### Configure `~/.bash_profile`
-Note: there is a dotfiles repo that has this information in it. See Dotfiles section below.
-```
-subl ~/.bash_profile
-```
-
-```shell
-# Update and clean homebrow in one command
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-# note: psql is 'pinned' by using brew pin postgresql so that it's not updated automatically
-# to upgrade psql, first do brew unpin postgresql
-
-# prompt colors!
-RED='\[\e[1;31m\]'
-YELLOW='\[\e[0;33m\]'
-BOLDYELLOW='\[\e[1;33m\]'
-GREEN='\[\e[0;32m\]'
-BLUE='\[\e[1;34m\]'
-DARKBROWN='\[\e[1;33m\]'
-DARKGRAY='\[\e[1;30m\]'
-CUSTOMCOLORMIX='\[\e[1;30m\]'
-DARKCUSTOMCOLORMIX='\[\e[1;32m\]'
-LIGHTBLUE="\[\033[0;36m\]"
-BOLDLIGHTBLUE="\[\033[1;36m\]"
-BOLDPURPLE='\[\e[1;35m\]'
-
-green="\[\033[0;32m\]"
-blue="\[\033[0;34m\]"
-purple="\[\033[0;35m\]"
-reset="\[\033[0m\]"
-
-# Add colors to Terminal
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-
-# Get Git branch
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-# Format to user@host:/path/to/directory (branch-name)
-# export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
-export PS1="$purple\u$green\$(parse_git_branch)$LIGHTBLUE \W $ $reset"
-
-# Enable tab completion
-source ~/git-completion.bash
-
-# Change command prompt
-source ~/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-
-# Git Aliases
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gco='git checkout'
-alias gb='git branch'
-alias gl='git log'
-alias glp="git log --pretty=format:'%h - %an, %ar: %s'"
-alias glo='git log --oneline'
-```
 
 ## Set up file structure in `/Users/annerichardson/`
 ```
@@ -415,10 +315,6 @@ mkdir learning_academies
 mkdir open_source
 mkdir personal_projects
 ```
-
-## Configure dotfiles
-- My 2017 Mac dotfiles repo https://github.com/lortza/dotfiles
-- My 2012 Mac dotfiles gist https://gist.github.com/lortza/32a0a39733200d6ef2b158ccb7364ffc
 
 ## Show Library folder
 ```shell
