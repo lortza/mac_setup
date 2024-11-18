@@ -1,0 +1,15 @@
+discord
+dropbox
+firefox
+google-chrome
+hiddenbar
+licecap
+mas
+obsidian
+postman
+rectangle
+slack
+spotify
+sublime-text
+visual-studio-code
+zoom

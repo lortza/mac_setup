@@ -31,14 +31,9 @@ This guide is based on:
 - Restart computer again after all updates
 - Check Console for errors
 
-### Install Purchased
+### Install Apps Purchased from AppStore
 
 - CopyClip
-- Magnet
-- Toggl Desktop
-- Evernote, sign in
-- Restart computer again after all updates
-- Check Console for errors
 
 ## Clean up Dock
 
@@ -99,34 +94,11 @@ May get `Error: Already signed in`
 
 ### Install Apps
 
-#### Option 1: Install Manually -- I did this
+There is a file in this repo called `homebrew_apps.txt`. This file contains the list of all of the homebrew apps I like to install. Install them all at once with: 
 
 ```shell
-brew install git
-brew cask install spectacle
-brew cask install sublime-text
-brew cask install atom
-brew cask install visual-studio-code
-brew cask install harvest
-brew cask install slack
-brew cask install dropbox
-brew cask install firefox
-brew cask install gimp
-brew cask install postman
-brew cask install spotify
-brew cask install zoomus     # Zoom.us
-brew cask install licecap
-mas install 803453959        # Slack
-brew install graphviz
-brew install imagemagick
-brew install ghostscript
+xargs brew install < my/path/to/homebrew_apps.txt
 ```
-
-- Check App Store for Updates & run them
-- Restart Mac & check Console for errors
-
-#### Option 2: Set up Brewfile -- I have not done this
-There is another way to do this, which uses `Brewfile` to install everything all at once. It is outlined [here](https://github.com/taniarascia/mac).
 
 ## Install Node.js
 - Install node
